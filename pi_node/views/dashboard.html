@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link href="css/main.min.css" rel="stylesheet" />
+    <link href="css/dashboard.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="/js/interface.js"></script>
+</head>
+
+<body>
+    <div class="page-width-container">
+        <div class="charts-container">
+            <div id="temperature-container" class="container">
+                <div class="chart-title temperature">
+                    Temperature
+                </div>
+                <div class="chart-data-container temperature">
+                    <div id="central-temperature-display" class="chart-data central-temperature">0</div>
+                    <div class="chart-data-units small central-temperature">
+                        &deg;C
+                    </div>
+                </div>
+                <svg id="temperature" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle fill="transparent" cx="100" cy="100" r="80" id="central" stroke-dashoffset="0" stroke-dasharray="552.64" transform="rotate(90 100 100)"></circle>
+                    <circle fill="transparent" cx="100" cy="100" r="80" id="central-bar" stroke-dashoffset="552.64" stroke-dasharray="552.64"
+                        transform="rotate(90 100 100)"></circle>
+                    <!--<circle fill="transparent" cx="100" cy="100" r="88" id="central-target-range" stroke-dashoffset="0" stroke-dasharray="552.64"
+                        transform="rotate(234 100 100)"></circle>-->
+                </svg>
+            </div>
+
+            <div id="humidity-container" class="container" data-percent="0">
+                <div class="chart-title humidity">
+                    Humidity
+                </div>
+                <div class="chart-data-container humidity">
+                    <div id="humidity-display" class="chart-data humidity">0</div>
+                    <div class="chart-data-units small humidity">
+                        &#37;
+                    </div>
+                </div>
+                <svg id="humidity" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle fill="transparent" cx="100" cy="100" r="80" id="humidity-percent" stroke-dashoffset="0" stroke-dasharray="502.4"
+                        transform="rotate(90 100 100)"></circle>
+                    <circle fill="transparent" cx="100" cy="100" r="80" id="humidity-percent-bar" stroke-dashoffset="440" stroke-dasharray="440"
+                        transform="rotate(90 100 100)"></circle>
+                    <!--<circle fill="transparent" cx="100" cy="100" r="80" id="humidity-target-range" stroke-dashoffset="0" stroke-dasharray="502.4"
+                        transform="rotate(360 100 100)"></circle>-->
+                </svg>
+            </div>
+        </div>
+
+        <div class="photo-container">
+            <img src="pictures/image.jpg" id="camera" title="monitor snapshot" alt="monitor snapshot" />
+        </div>
+    </div>
+</body>
+
+</html>

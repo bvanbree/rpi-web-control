@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    //padding: 0 10px;
+}
+.title-bar
+.photo-chart-container {
+    width: 60%;
+    margin: 0 auto;
+    img {
+        //width: 80%;
+        height: 500px;
+    }
+    .chart-container {
+        width: 100px;
+        float: right;
+    }
+}
+svg {
+    height: 500px;
+    width: 50px;
+}
+svg path {
+    transition: stroke-dashoffset 1s linear;
+    stroke: #EEE;
+    stroke-width: 25px;
+}

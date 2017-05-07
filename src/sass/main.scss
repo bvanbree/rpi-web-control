@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 1em;
+}
+.night {
+    color: #FFF;
+    background-color: #223340;
+    svg circle {
+        stroke: #002230;
+    }
+}
+.container {
+    position: relative;
+    margin: 1em auto;
+    text-align: center;
+}
+
+// Colors
+.central-temperature {
+    color: #FFAA00;
+}
+.bask-temperature {
+    color: #FF7700;
+}
+.central-temperature.warning,
+.bask-temperature.warning {
+    color: #FF3344;
+}
+.humidity {
+    color: #88AFFF;
+}
+#central-bar {
+    stroke: #FFAA00;
+}
+#bask-bar {
+    stroke: #FF7700;
+}
+#central-bar.warning,
+#bask-bar.warning {
+    stroke: #FF3344;
+}
+.chart-data.warning,
+.chart-data.warning + .chart-data-units {
+    color: #FF3344;
+}
+#humidity-percent-bar {
+    stroke: #88AFFF;
+}
+#humidity-percent-bar.warning {
+    stroke: #FF66CC;
+}
+.humidity.warning,
+#humidity-display.warning,
+#humidity-display.warning + .chart-data-units {
+    color: #FF66CC;
+}
+#central-target-range,
+#bask-target-range,
+#humidity-target-range {
+    stroke: rgba(0, 255, 100, .3);
+}

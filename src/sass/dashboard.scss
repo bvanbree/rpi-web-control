@@ -1,0 +1,120 @@
+.page-width-container {
+    padding: 1em;
+}
+.photo-container {
+    width: 65%;
+    margin-right: 9%;
+    display: inline-block;
+    img {
+        width: 100%;
+    }
+}
+.charts-container {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+.container {
+    width: 200px;
+    height: 200px;
+    svg {
+        width: 200px;
+        height: 200px;
+    }
+}
+.chart-title {
+    position: absolute;
+    display: block;
+    color: #000;
+    z-index: 100;
+    .subtitle {
+        font-size: .7em;
+        margin-top: -3px;
+    }
+}
+.night {
+    .chart-title {
+        color: #FFF;
+    }
+}
+.chart-data-container {
+    position: absolute;
+    display: block;
+    left: 1em;
+    top: 88px;
+    font-size: 2.75em;
+    font-weight: bold;
+    width: 100px;
+    height: 80px;
+    .nested-chart-data-container {
+        font-size: .5em;
+        position: relative;
+        top: -1.6em;
+        left: .2em;
+        .chart-data-units {
+            top: -2.1em;
+            left: 1.6em;
+        }
+    }
+    .small {
+        font-size: .5em;
+    }
+}
+.chart-data,
+.chart-data-units {
+    position: relative;
+}
+.chart-data-units {
+    left: 1.6em;
+    top: -2.1em;
+}
+
+svg circle {
+    transition: stroke-dashoffset 1s linear;
+    stroke: #EEE;
+    stroke-width: 2em;
+}
+.chart-title.temperature {
+    left: 55px;
+    top: 70px;
+}
+#central-temperature-display {
+    content: attr(data);
+}
+#basking-temperature-display {
+    content: "/"attr(data);
+}
+#bask,
+#bask-bar,
+#bask-target-range {
+    stroke-width: .9em;
+}
+
+#central-target-range {
+    stroke-dashoffset: 525.28;
+}
+#bask-target-range {
+    stroke-dashoffset: 387.76;
+}
+
+.chart-title.humidity {
+    left: 68px;
+    top: 70px;
+}
+#humidity-display {
+    content: attr(data);
+}
+#humidity-percent {
+    stroke-dashoffset: 0;
+}
+#humidity-target-range {
+    stroke-dashoffset: 377;
+}
+
+@media screen and (max-width: 900px) {
+    .charts-container,
+    .photo-container {
+        display: block;
+        width: 100%;
+    }
+}
